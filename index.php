@@ -2,7 +2,12 @@
 $json = file_get_contents('books.json');
 $bookJson = json_decode($json, true);
 ?>
+<h1 align="center">Management of Books</h1>
 
+<form align="center" action="search.php" method="get">
+    <input type="text" name="query" placeholder="Type isbn" id="query">
+    <button type="submit">Search</button>
+</form>
 <table align="center" border="1" width="900">
     <tr>
         <th>Title</th>
@@ -35,9 +40,8 @@ $bookJson = json_decode($json, true);
     }
 
     ?>
-</table>
 
-<br>
+</table>
 <?php
 echo '<center>';
 echo '<a href="form.php">Add Book</a>';
